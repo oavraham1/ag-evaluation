@@ -17,7 +17,7 @@ The 'datasets' directory is divided into several sub-directories:
 
 'ambiguous' - in these datasets, the target words are morphologically ambiguous (to evaluate the ambiguity effect).
 
-'cohyponyms' - datasets in which the preferred-relation is defined as "cohyponyms" (in contraset to "hyponym-hypernym" in the other datasets
+'cohyponyms' - datasets in which the preferred-relation is defined as "cohyponyms" (in contrast to "hyponym-hypernym" in the other datasets).
 
 The code in "sample.py" loads a gensim word2vec model and runs evaluation on the 'nn' dataset.
 Notice the sample model it uses ('model.vec') covers only part of the vocabulary, thus the output will contain messages of the type "could not get similarity..." for the OOV words in the datasets.
