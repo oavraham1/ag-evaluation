@@ -7,13 +7,17 @@ The evaluation method and datasets are a part of the work presented in the paper
 Please cite the latter when using these resources.
 
 
-'nn', 'jj', 'vb' and 'cat' - in these datasets, all the words are base forms.
+The 'datasets' directory is divided into several sub-directories:
 
-'nn-inf', 'jj-inf' and 'vb-inf' - contain the same words, but inflected to other forms (to evaluate the effect of rich morphology).
+'basic' - in these datasets, all the words are base forms.
 
-'nn-jj', 'nn-vb' and 'vb-jj' - in these datasets, the target words are morphologically ambiguous (to evaluate the ambiguity effect).
+'inflected' - these datasets contain the same words as 'basic', but inflected to other forms (to evaluate the effect of rich morphology).
 
-'0-100' is a dataset where the target words are rare (occur less than 100 times in Hebrew wikipedia).
+'rare' - in these datasets, all the target words are rare (occur less than 100 times in Hebrew wikipedia).
+
+'ambiguous' - in these datasets, the target words are morphologically ambiguous (to evaluate the ambiguity effect).
+
+'cohyponyms' - datasets in which the preferred-relation is defined as "cohyponyms" (in contraset to "hyponym-hypernym" in the other datasets
 
 The code in "sample.py" loads a gensim word2vec model and runs evaluation on the 'nn' dataset.
 Notice the sample model it uses ('model.vec') covers only part of the vocabulary, thus the output will contain messages of the type "could not get similarity..." for the OOV words in the datasets.
