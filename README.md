@@ -18,7 +18,7 @@ Run the following line on shell:
 $ python sample.py
 ```
 The code in *sample.py* loads a gensim word2vec model and runs evaluation on the 'nn' dataset.  
-Notice the model it uses (*model.vec*) covers only part of the vocabulary, thus the output will contain messages of the type "could not get similarity..." for the OOV words in the datasets.
+Notice the model it uses (*model.vec*) covers only part of the vocabulary, so some of the comparisons in the datasets will not be used (to get warnings for oov words, just change the the `print_oov` parameter to `True`).
 
 ### Can I use a model created by other library (not gensim)?
 Sure, the model does not have to be a gensim model.  
