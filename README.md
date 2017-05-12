@@ -6,7 +6,7 @@ It was introduced in the paper [Improving Reliability of Word Similarity Evaluat
 Here we provide:
 - A python implementation of the method
 - A suite of matching datasets in Hebrew (some of them were developed as part of the paper [The Interplay of Semantics and Morphology in Word Embedding](https://www.aclweb.org/anthology/E/E17/E17-2067.pdf))
-- An example script using the method
+- An example script, which evaluates a sample model on one of the datasets using the AG method
 
 ### Requirements
 - Python 2.7
