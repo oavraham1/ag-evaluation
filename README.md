@@ -5,7 +5,7 @@ It was introduced in the paper [Improving Reliability of Word Similarity Evaluat
 
 Here we provide:
 - A python implementation of the method
-- A suite of matching datasets in Hebrew (some were developed as part of the paper [The Interplay of Semantics and Morphology in Word Embedding](https://www.aclweb.org/anthology/E/E17/E17-2067.pdf))
+- A suite of matching datasets in Hebrew (some of them were developed as part of the paper [The Interplay of Semantics and Morphology in Word Embedding](https://www.aclweb.org/anthology/E/E17/E17-2067.pdf))
 - An example script using the method
 
 ### Requirements
@@ -17,19 +17,19 @@ Run the following line on shell:
 ```sh
 $ python sample.py
 ```
-The code in "sample.py" loads a gensim word2vec model and runs evaluation on the 'nn' dataset.  
-Notice the sample model it uses ('model.vec') covers only part of the vocabulary, thus the output will contain messages of the type "could not get similarity..." for the OOV words in the datasets.
+The code in *sample.py* loads a gensim word2vec model and runs evaluation on the 'nn' dataset.  
+Notice the model it uses (*model.vec*) covers only part of the vocabulary, thus the output will contain messages of the type "could not get similarity..." for the OOV words in the datasets.
 
 ### Can I use a model created by other library (not gensim)?
 Sure, the model does not have to be a gensim model.  
 It just needs to be encapsulated in a class with a method "similarity" which takes two words and returns a score.
 
-### Can I use the method for other languages?
+### Can I use the AG method to evaluate models of other languages?
 Of course, you just need to provide matching datasets which follow the structure described in the paper.
 
-### Can I perform fine-grained analysis?
+### Can I perform more fine-grained analysis?
 Yes, you can filter comparisions by different properties of the `Comparison` class (declared in *evaluator.py*).  
-For example, by changing the lambda in the last line of *sample.py* from `comp: comp.set_name == 'nn'` to `comp: comp.set_name == 'nn' and comp.compare_type=randoms`, you include only "positive-random" comparisons in the evaluation.
+For example, by changing the lambda in the last line of *sample.py* from `comp: comp.set_name == 'nn'` to `comp: comp.set_name == 'nn' and comp.compare_type == 'randoms'`, you include only "positive-random" comparisons in the evaluation.
 
 ### The provided datasets
 The 'datasets' directory is divided into several sub-directories: 
